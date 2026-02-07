@@ -37,6 +37,9 @@ bool SandpileApp::init() {
 
   gui_place = new GUI::GUI_place(camera, ResourceManager::getMaterial("default"));
 
+  gui_place->add_element<GUI::TextRenderer>(2, ResourceManager::get_font("calibri"), ResourceManager::getShaderProgram("textShader"),
+                                            "Is running: false", glm::vec3(0.f), glm::vec2(0.1f, 90.f), glm::vec2(0.1f), "is_runnng_text", false);
+
   gui_place->add_element<GUI::Sprite>(-3, ResourceManager::getMaterial("emptySprite"), "default",
     glm::vec2(50.f), glm::vec2(50.f), "picture", true)
     ->set_mouse_down_callback([&]() {
@@ -196,6 +199,7 @@ void SandpileApp::on_key_update(const double delta) {
   if (Input::isKeyPressed(KeyCode::KEY_SPACE)) {
     is_simulation_running = !is_simulation_running;
     is_key_pressed = true;
+    gui_place->get_element<GUI::TextRenderer>("is_runnng_text")->set_text(std::string("Is running: ") + (is_simulation_running ? "true" : "false"));
 
   } else if (Input::isKeyPressed(KeyCode::KEY_P)) {
     is_simulation_running = true;
