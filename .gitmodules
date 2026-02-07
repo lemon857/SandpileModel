@@ -1,0 +1,3 @@
+[submodule "external/CppEngine"]
+	path = external/CppEngine
+	url = https://github.com/lemon857/CppEngine.git
