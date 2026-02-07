@@ -25,7 +25,12 @@ For example for unix-like systems:
 ```bash
 ./build/bin/SandpileModel
 ```
-# How it work
+Use `Left Mouse Button` click on field to add some amout of sand  
+Use `Space` to start or stop simulation  
+
+# A little bit about it
+
+It is a simple version simulation of [Abelian sandpile model](https://en.wikipedia.org/wiki/Abelian_sandpile_model)  
 
 This simulation render on your screen with my [cpp engine](https://github.com/lemon857/CppEngine)  
 

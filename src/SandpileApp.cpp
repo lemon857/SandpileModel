@@ -163,16 +163,16 @@ void SandpileApp::on_update(const double delta) {
             bitmap.set_color(j + left, i + bottom, {0xAA, 0xAA, 0xAA});
 
           } else if (mat(j, i).bv == 1) {
-            bitmap.set_color(j + left, i + bottom, {0xFF, 0x00, 0x00});
+            bitmap.set_color(j + left, i + bottom, {0x99, 0x0D, 0x55});
 
           } else if (mat(j, i).bv == 2) {
-            bitmap.set_color(j + left, i + bottom, {0x00, 0xFF, 0x00});
+            bitmap.set_color(j + left, i + bottom, {0xAA, 0x04, 0x77});
 
           } else if (mat(j, i).bv == 3) {
-            bitmap.set_color(j + left, i + bottom, {0x00, 0x00, 0xFF});
+            bitmap.set_color(j + left, i + bottom, {0xFF, 0x00, 0xFF});
 
           } else if (mat(j, i).bv >= 4) {
-            bitmap.set_color(j + left, i + bottom, {0xFF, 0xFF, 0xFF});
+            bitmap.set_color(j + left, i + bottom, {0xFF, 0xFF, 0x00});
           }
         }
       }
