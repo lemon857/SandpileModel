@@ -25,8 +25,11 @@ For example for unix-like systems:
 ```bash
 ./build/bin/SandpileModel
 ```
-Use `Left Mouse Button` click on field to add some amout of sand  
-Use `Space` to start or stop simulation  
+
+## Hotkeys
+`Left Mouse Button` click on field to add some amout of sand  
+`Space` to start or stop simulation  
+`P` for run one step of simulation
 
 # A little bit about it
 

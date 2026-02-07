@@ -24,6 +24,7 @@ private:
   size_t width;
   size_t height;
 
+  bool is_one_step_run;
   bool is_simulation_running;
   bool is_key_pressed;
 

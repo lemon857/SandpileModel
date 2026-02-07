@@ -23,6 +23,7 @@
 bool SandpileApp::init() {
   is_key_pressed = false;
   is_simulation_running = false;
+  is_one_step_run = false;
 
   current_frame_time = 0;
   move_multiplier = 0;
@@ -142,6 +143,10 @@ void SandpileApp::on_ui_render() {
 void SandpileApp::on_update(const double delta) {
   if (is_simulation_running) {
     SandpileTick(mat);
+    if (is_one_step_run) {
+      is_one_step_run = false;
+      is_simulation_running = false;
+    }
   }
 
   gui_place->on_update(delta);
@@ -190,6 +195,11 @@ void SandpileApp::on_key_update(const double delta) {
 
   if (Input::isKeyPressed(KeyCode::KEY_SPACE)) {
     is_simulation_running = !is_simulation_running;
+    is_key_pressed = true;
+
+  } else if (Input::isKeyPressed(KeyCode::KEY_P)) {
+    is_simulation_running = true;
+    is_one_step_run = true;
     is_key_pressed = true;
   }
 }
